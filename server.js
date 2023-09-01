@@ -1,75 +1,40 @@
-// server.js
 const express = require('express');
-const cors = require('cors');
-const admin = require('firebase-admin');
-const firebaseConfig = require('./firebaseConfig');
-const serviceAccount =  require("./serviceAccount.json");
-
-
-
 const app = express();
-app.use(cors());
+const PORT = process.env.PORT || 5050;
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
+
 app.use(express.json());
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: firebaseConfig.databaseURL
+const transitionsData = require('./data/transitions.json');
+const scenesData = require('./data/scenes.json');
+
+app.get('/', (_req, res) => {
+  console.log("get request I guess");
+  res.send("Hey, this server runs, cool");
 });
 
-// Example API route to authenticate user
-app.post('/authenticate', async (req, res) => {
-  const { idToken } = req.body;
-
+app.get('/transitions', (_req, res) => {
   try {
-    const decodedToken = await admin.auth().verifyIdToken(idToken);
-    res.status(200).json(decodedToken);
+    res.json(transitionsData);
   } catch (error) {
-    res.status(401).json({ error: 'Invalid token' });
+    console.error('Error fetching transitions:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-console.log(firebaseConfig);
+app.get('/scenes', (_req, res) => {
+  try {
+    res.json(scenesData);
+  } catch (error) {
+    console.error('Error fetching scenes:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
-app.get('/api/images', async (req, res) => {
-    try {
-      const storage = admin.storage();
-      const bucket = storage.bucket(); // Use the default bucket
-      const [files] = await bucket.getFiles();
-  
-      const imageUrls = files.map(file => {
-        const imageUrl = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
-        return imageUrl;
-      });
-  
-      res.status(200).json(imageUrls);
-    } catch (error) {
-      console.error('Error fetching image URLs:', error);
-      res.status(500).json({ error: 'Error fetching image URLs' });
-    }
-  });
-
-app.post('/saveGameData', async (req, res) => {
-    const { userId, gameData } = req.body;
-  
-    if (!userId) {
-      res.status(400).json({ error: 'User ID is missing' });
-      return;
-    }
-  
-    try {
-      const db = admin.firestore();
-      const docRef = db.collection('gameData').doc(userId);
-      await docRef.set(gameData);
-      res.status(200).json({ message: 'Game data saved successfully' });
-    } catch (error) {
-      console.error('Error saving game data:', error);
-      res.status(500).json({ error: 'Error saving game data' });
-    }
-  });
-  
-
-
-const PORT = process.env.PORT || 5050;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

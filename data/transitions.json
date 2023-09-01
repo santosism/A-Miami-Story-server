@@ -1,0 +1,92 @@
+{
+    "transitions": {
+      "start": {
+        "start": "versaillesCafe"
+      },
+      "versaillesCafe": {
+        "walk": "walking",
+        "uber": "uber",
+        "metrorail": "metrorail",
+        "help": "help"
+      },
+      "walking": {
+        "move": "continueWalking"
+      },
+      "continueWalking": {
+        "look": "traffic"
+      },
+      "traffic": {
+        "look": "panic"
+      },
+      "panic": {
+        "move": "visitStore"
+      },
+      "visitStore": {
+        "look": "stillInStore"
+      },
+      "stillInStore": {
+        "look": "stillInTheStore"
+      },
+      "stillInTheStore": {
+        "move": "inTheRain"
+      },
+      "inTheRain": {
+        "move": "stillWalking"
+      },
+      "stillWalking": {
+        "look": "timePasses"
+      },
+      "timePasses": {
+        "move": "demoDay1"
+      },
+      "uber": {
+        "wait": "keepWaiting"
+      },
+      "keepWaiting": {
+        "wait": "moreWaiting"
+      },
+      "moreWaiting": {
+        "wait": "carRide"
+      },
+      "carRide": {
+        "continue": "carPanic"
+      },
+      "carPanic": {
+        "continue": "bridge"
+      },
+      "bridge": {
+        "wait": "waitForBridge"
+      },
+      "waitForBridge": {
+        "wait": "freeBridge"
+      },
+      "freeBridge": {
+        "continue": "demoDay2"
+      },
+      "metrorail": {
+        "enter": "easyCard"
+      },
+      "easyCard": {
+        "enter": "metroRide"
+      },
+      "metroRide": {
+        "enter": "stuck"
+      },
+      "stuck": {
+        "exit": "metroWaiting"
+      },
+      "metroWaiting": {
+        "exit": "metroMoving"
+      },
+      "metroMoving": {
+        "exit": "lastBus"
+      },
+      "lastBus": {
+        "enter": "demoDay3"
+      },
+      "help": {
+        "back": "versaillesCafe"
+      }
+    }
+  }
+  
