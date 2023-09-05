@@ -531,7 +531,7 @@
       ]
     },
     "help": {
-      "description": "-Welcome to A Miami Story! Here are some player controls:\n- Type the option's text to make a choice.\n- Choose the best option to see four different endings. If stuck, remember four commands: move, look, wait, and panic.!\nGood luck!\n\n- Type 'back' to return to the previous scene.\nType restart to start over or start a new game.",
+      "description": "-Welcome to A Miami Story! Here are some player controls:\n- Type the option's text to make a choice.\n- Choose the best option to see four different endings. If stuck, remember four commands: move, look, wait, and panic.!\nGood luck!\n\n- Type 'back' to return to the previous scene.\nType clear and then restart to start over.",
       "choices": [
         {
           "text": "back",
