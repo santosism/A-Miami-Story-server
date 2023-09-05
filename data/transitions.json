@@ -1,92 +1,170 @@
 {
-    "transitions": {
-      "start": {
-        "start": "versaillesCafe"
-      },
-      "versaillesCafe": {
-        "walk": "walking",
-        "uber": "uber",
-        "metrorail": "metrorail",
-        "help": "help"
-      },
-      "walking": {
-        "move": "continueWalking"
-      },
-      "continueWalking": {
-        "look": "traffic"
-      },
-      "traffic": {
-        "look": "panic"
-      },
-      "panic": {
-        "move": "visitStore"
-      },
-      "visitStore": {
-        "look": "stillInStore"
-      },
-      "stillInStore": {
-        "look": "stillInTheStore"
-      },
-      "stillInTheStore": {
-        "move": "inTheRain"
-      },
-      "inTheRain": {
-        "move": "stillWalking"
-      },
-      "stillWalking": {
-        "look": "timePasses"
-      },
-      "timePasses": {
-        "move": "demoDay1"
-      },
-      "uber": {
-        "wait": "keepWaiting"
-      },
-      "keepWaiting": {
-        "wait": "moreWaiting"
-      },
-      "moreWaiting": {
-        "wait": "carRide"
-      },
-      "carRide": {
-        "continue": "carPanic"
-      },
-      "carPanic": {
-        "continue": "bridge"
-      },
-      "bridge": {
-        "wait": "waitForBridge"
-      },
-      "waitForBridge": {
-        "wait": "freeBridge"
-      },
-      "freeBridge": {
-        "continue": "demoDay2"
-      },
-      "metrorail": {
-        "enter": "easyCard"
-      },
-      "easyCard": {
-        "enter": "metroRide"
-      },
-      "metroRide": {
-        "enter": "stuck"
-      },
-      "stuck": {
-        "exit": "metroWaiting"
-      },
-      "metroWaiting": {
-        "exit": "metroMoving"
-      },
-      "metroMoving": {
-        "exit": "lastBus"
-      },
-      "lastBus": {
-        "enter": "demoDay3"
-      },
-      "help": {
-        "back": "versaillesCafe"
-      }
+  "transitions": {
+    "start": {
+      "start": "versaillesCafe",
+      "help": "help"
+    },
+    "versaillesCafe": {
+      "wait": "vibin",
+      "move": "inAHurry",
+      "look": "observe",
+      "panic": "worry",
+      "back": "start",
+      "restart": "start",
+      "help": "help"
+    },
+    "vibin": {
+      "move": "inAHurry",
+      "wait": "stillVibin",
+      "look": "observe",
+      "panic": "worry",
+      "back": "versaillesCafe",
+      "restart": "start",
+      "help": "help"
+    },
+    "inAHurry": {
+      "move": "onTheMove",
+      "back": "vibin",
+      "help": "help"
+    },
+    "onTheMove": {
+      "move": "bayside",
+      "back": "inAHurry",
+      "help": "help"
+    },
+    "bayside": {
+      "move": "moveBayside",
+      "back": "onTheMove",
+      "help": "help"
+    },
+    "moveBayside": {
+      "move": "endOfBayside",
+      "back": "bayside",
+      "help": "help"
+    },
+    "endOfBayside": {
+      "move": "bar",
+      "back": "moveBayside",
+      "help": "help"
+    },
+    "bar": {
+      "move": "drunk",
+      "back": "endOfBayside",
+      "help": "help"
+    },
+    "drunk": {
+      "move": "end1",
+      "back": "bar",
+      "help": "help"
+    },
+    "end1": {
+      "restart": "start",
+      "help": "help"
+    },
+    "stillVibin": {
+      "wait": "continueTheVibe",
+      "back": "versaillesCafe",
+      "restart": "start",
+      "help": "help"
+    },
+    "continueTheVibe": {
+      "wait": "newsVibe",
+      "back": "stillVibin",
+      "restart": "start",
+      "help": "help"
+    },
+    "newsVibe": {
+      "wait": "food",
+      "back": "continueTheVibe",
+      "restart": "start",
+      "help": "help"
+    },
+    "food": {
+      "wait": "coffee",
+      "back": "newsVibe",
+      "restart": "start",
+      "help": "help"
+    },
+    "coffee": {
+      "wait": "crash",
+      "back": "food",
+      "restart": "start",
+      "help": "help"
+    },
+    "crash": {
+      "wait": "end2",
+      "back": "coffee",
+      "restart": "start",
+      "help": "help"
+    },
+    "end2": {
+      "restart": "start",
+      "help": "help"
+    },
+    "observe": {
+      "look": "briefcase",
+      "back": "versaillesCafe",
+      "restart": "start",
+      "help": "help"
+    },
+    "briefcase": {
+      "look": "takeMoney",
+      "back": "observe",
+      "restart": "start",
+      "help": "help"
+    },
+    "takeMoney": {
+      "look": "badMove",
+      "back": "briefcase",
+      "restart": "start",
+      "help": "help"
+    },
+    "badMove": {
+      "look": "score",
+      "back": "takeMoney",
+      "restart": "start",
+      "help": "help"
+    },
+    "score": {
+      "look": "end3",
+      "back": "badMove",
+      "restart": "start",
+      "help": "help"
+    },
+    "end3": {
+      "restart": "start",
+      "help": "help"
+    },
+    "worry": {
+      "worry": "wrong",
+      "back": "versaillesCafe",
+      "restart": "start",
+      "help": "help"
+    },
+    "wrong": {
+      "worry": "off",
+      "back": "panic",
+      "restart": "start",
+      "help": "help"
+    },
+    "off": {
+      "worry": "worryHome",
+      "back": "wrong",
+      "restart": "start",
+      "help": "help"
+    },
+    "worryHome": {
+      "worry": "end4",
+      "back": "off",
+      "restart": "start",
+      "help": "help"
+    },
+    "end4": {
+      "restart": "start",
+      "help": "help"
+    },
+    "help": {
+      "back": "versaillesCafe"
     }
   }
-  
+}
