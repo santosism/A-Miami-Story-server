@@ -457,7 +457,7 @@
       "description": "\nYou're supposed to do something. But you have this weird feeling, goosebumps on the back of your neck. \n-You feel that silent alarm in your mind going off.",
       "choices": [
         {
-          "text": "worry",
+          "text": "panic",
           "nextScene": "wrong"
         },
         {
@@ -474,7 +474,7 @@
       "description": "\nYou start pacing and sweating, you feel like people are watching you. But the rest of the people in the cafe pay you no mind.\n-You keep worrying, though.",
       "choices": [
         {
-          "text": "worry",
+          "text": "panic",
           "nextScene": "off"
         },
         {
@@ -491,7 +491,7 @@
       "description": "\nYou step outside for a moment, and try to catch your breath. \nSomeone offers you some water, and you drink it fast.\nYou still feel off. Maybe this is it, you think.",
       "choices": [
         {
-          "text": "worry",
+          "text": "panic",
           "nextScene": "worryHome"
         },
         {
@@ -508,7 +508,7 @@
       "description": "\nYou order an Uber and go home. You ignore texts and calls.\nYou lay in your bed, and try to watch TV.\nBut the feeling is still there.",
       "choices": [
         {
-          "text": "worry",
+          "text": "panic",
           "nextScene": "end4"
         },
         {
@@ -531,7 +531,7 @@
       ]
     },
     "help": {
-      "description": "-Welcome to A Miami Story! Here are some player controls:\n- Type the option's text to make a choice.\n- Choose the best option to see four different endings. If stuck, remember four commands: move, look, wait, and panic.!\nGood luck!\n\n- Type 'back' to return to the previous scene.",
+      "description": "-Welcome to A Miami Story! Here are some player controls:\n- Type the option's text to make a choice.\n- Choose the best option to see four different endings. If stuck, remember four commands: move, look, wait, and panic.!\nGood luck!\n\n- Type 'back' to return to the previous scene.\nType back to go back to a previous scene if possible, and restart to start over.",
       "choices": [
         {
           "text": "back",

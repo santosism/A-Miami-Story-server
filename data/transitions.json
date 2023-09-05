@@ -136,25 +136,25 @@
       "help": "help"
     },
     "worry": {
-      "worry": "wrong",
+      "panic": "wrong",
       "back": "versaillesCafe",
       "restart": "start",
       "help": "help"
     },
     "wrong": {
-      "worry": "off",
+      "panic": "off",
       "back": "panic",
       "restart": "start",
       "help": "help"
     },
     "off": {
-      "worry": "worryHome",
+      "panic": "worryHome",
       "back": "wrong",
       "restart": "start",
       "help": "help"
     },
     "worryHome": {
-      "worry": "end4",
+      "panic": "end4",
       "back": "off",
       "restart": "start",
       "help": "help"
