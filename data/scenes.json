@@ -1,7 +1,7 @@
 {
   "scenes": {
     "start": {
-      "description": "Miami. \nCapital of the strange \nand the wonderful. \nYou've been here all your life, \nmore or less. \n-You've never had much luck here.\n Until today. This is your Miami Story. \n It starts with a nice morning visit to Versailles Cafe.",
+      "description": "Miami.\nCapital of the strange \nand the wonderful. \nYou've been here all your life, more or less. \n- You've never had much luck here, though. Until today. This is your Miami Story. \n It starts with a nice morning visit to Versailles Cafe.",
       "choices": [
         {
           "text": "start",
@@ -14,7 +14,7 @@
       ]
     },
     "versaillesCafe": {
-      "description": "\nYou're at Versailles Cafe, early morning.\n A bright morning. \n You should be doing something. But it's a lazy kind of day. Time for a cortado. Or two.",
+      "description": "You're at Versailles Cafe, early morning. A bright morning. \n You should be doing something. But it's a lazy kind of day. Time for a cortado. Or two.",
       "previousScene": "start",
       "choices": [
         {
