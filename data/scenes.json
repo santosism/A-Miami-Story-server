@@ -14,7 +14,7 @@
       ]
     },
     "versaillesCafe": {
-      "description": "You're at Versailles Cafe, early morning. A bright morning. \n You should be doing something. But it's a lazy kind of day. Time for a cortado. Or two.",
+      "description": "You're at Versailles Cafe, early morning. A bright morning. \n You should be doing something. But it's a lazy kind of day. Time for a cortadito. Or two.",
       "previousScene": "start",
       "choices": [
         {
