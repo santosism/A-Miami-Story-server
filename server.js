@@ -3,6 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 5050;
 const cors = require('cors');
 
+//server set up with Express and Node, and to handle endpoints for transitions and scenes data. Did not need separate routes, as game only has two endpoints needed for data
+
 app.use(cors({
   origin: 'http://localhost:3000'
 }));
