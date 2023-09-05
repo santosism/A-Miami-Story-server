@@ -60,7 +60,7 @@ npm i Express
 
 npm i nodemon 
 
-npm nodemon server.js
+nodemon server.js
 
 Test on Postman (endpoints /transitions and /scenes)
 
