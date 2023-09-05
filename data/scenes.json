@@ -1,186 +1,542 @@
 {
   "scenes": {
     "start": {
-      "description": "Welcome to A Miami Story! Here are some player controls:\n- Type the option's text to make a choice.\n- You'll have some options, but if you ever need a reminder, type 'help'. Choose the best option to reach BrainStation for Demo Day!\nGood luck!",
+      "description": "Miami. \nCapital of the strange \nand the wonderful. \nYou've been here all your life, \nmore or less. \n-You've never had much luck here.\n Until today. This is your Miami Story. \n It starts with a nice morning visit to Versailles Cafe.",
       "choices": [
-        { "text": "start", "nextScene": "versaillesCafe" }
+        {
+          "text": "start",
+          "nextScene": "versaillesCafe"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
     "versaillesCafe": {
-      "description": "You're at Versailles Cafe at 8 am. It's a bright morning. And you have plenty of time, right?",
+      "description": "\nYou're at Versailles Cafe, early morning.\n A bright morning. \n You should be doing something. But it's a lazy kind of day. Time for a cortado. Or two.",
+      "previousScene": "start",
       "choices": [
-        { "text": "walk", "nextScene": "walking", "hint": "Enjoy the fresh air and the scenic route." },
-        { "text": "uber", "nextScene": "uber", "hint": "Ride in comfort with a driver." },
-        { "text": "metrorail", "nextScene": "metrorail", "hint": "Use public transportation for a crowded but efficient journey." },
-        { "text": "help", "nextScene": "help", "hint": "Get a reminder of the controls." }
+        {
+          "text": "wait",
+          "nextScene": "vibin"
+        },
+        {
+          "text": "move",
+          "nextScene": "inAHurry"
+        },
+        {
+          "text": "look",
+          "nextScene": "observe"
+        },
+        {
+          "text": "panic",
+          "nextScene": "worry"
+        },
+        {
+          "text": "back",
+          "nextScene": "$previousScene"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "walking": {
-      "description": "You've decided to walk to BrainStation. It's a long journey, but the weather is nice.",
+    "vibin": {
+      "description": "You drink your cortaditos. Maybe even eat a croqueta or two. An hour passes. Maybe two. \nSomething's on your mind, though",
       "choices": [
-        { "text": "move", "nextScene": "continueWalking" }
+        {
+          "text": "move",
+          "nextScene": "inAHurry"
+        },
+        {
+          "text": "wait",
+          "nextScene": "stillVibin"
+        },
+        {
+          "text": "look",
+          "nextScene": "observe"
+        },
+        {
+          "text": "panic",
+          "nextScene": "worry"
+        },
+        {
+          "text": "back",
+          "nextScene": "versaillesCafe"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "continueWalking": {
-      "description": "So, you walk. And the streets of Miami teem with cars, and the smell of gasoline hits your nose. Suddenly, you hear a strange noise to your right.",
+    "inAHurry": {
+      "description": "Something tells you to get out of the Cafe. Just as suddenly as you feel the humid air outside, your phone rings. \n A reminder that you're supposed to meet your friend Downtown.",
       "choices": [
-        { "text": "look", "nextScene": "traffic" }
+        {
+          "text": "move",
+          "nextScene": "onTheMove"
+        },
+        {
+          "text": "back",
+          "nextScene": "vibin"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "traffic": {
-      "description": "You feel like you've been walking for forever. You make it to 27th avenue, on Calle Ocho. But, just as you're about to cross the street, a loud smack of metal is heard to your right. You turn and see it.",
+    "onTheMove": {
+      "description": "You take the trolley to Downtown, Government Center.\n- Your friend is at Bayside, not too far of a walk. But you have to hurry. ",
       "choices": [
-        { "text": "look", "nextScene": "panic" }
+        {
+          "text": "move",
+          "nextScene": "bayside"
+        },
+        {
+          "text": "back",
+          "nextScene": "inAHurry"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "panic": {
-      "description": "A pile-up has happened, cars are blocking the road, the streets are blistering hot. A standstill. You could always take a quick detour to get some water at a local bodega. Maybe that'll help you cool off.",
+    "bayside": {
+      "description": "Your friend waves at you from the entrance path to Bayside Marketplace. \n-They're leaving Miami tomorrow, so today's a last hangout sort of day. You decide to walk around together for a while ",
       "choices": [
-        { "text": "move", "nextScene": "visitStore" }
+        {
+          "text": "move",
+          "nextScene": "moveBayside"
+        },
+        {
+          "text": "back",
+          "nextScene": "onTheMove"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "visitStore": {
-      "description": "Everything in the store tightly packed together, packed shelves of random assortments of energy drinks, cigarette brands, and Takis variations. You pay for a bottle of water. And then, the rain starts. Like someone turned on a water faucet somewhere and forgot to turn it off. The rain is roaring now, the sun blotted out. You should wait, right?",
+    "moveBayside": {
+      "description": "It's been a nice day, all things considered: \n A lot of free samples at the food court. A lot of Miami merchandise buying, bootleg Miami Heart shirts and all. \n- A lot of silences. But you have to keep moving, it's 7 pm.",
       "choices": [
-        { "text": "look", "nextScene": "stillInStore" }
+        {
+          "text": "move",
+          "nextScene": "endOfBayside"
+        },
+        {
+          "text": "back",
+          "nextScene": "bayside"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "stillInStore": {
-      "description": "You wait. And wait. You buy chips, an energy drink. The rain is still going strong. You should probably wait some more, right?",
+    "endOfBayside": {
+      "description": "Your friend waves goodbye as you end the night, they have to pack and get ready for their flight. \n-You wander around Downtown, until you find a bar that's open late.",
       "choices": [
-        { "text": "look", "nextScene": "stillInTheStore" }
+        {
+          "text": "move",
+          "nextScene": "bar"
+        },
+        {
+          "text": "back",
+          "nextScene": "moveBayside"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "stillInTheStore": {
-      "description": "What should have been a five-minute visit to the store is now three hours later. The rain has not let up. You can't wait any longer. You'll keep on walking.",
+    "bar": {
+      "description": "You sit at the bar. \n You drink. Time passes. You haven't ate much. \nYou get drunk fast. You don't talk to anyone.",
       "choices": [
-        { "text": "move", "nextScene": "inTheRain" }
+        {
+          "text": "move",
+          "nextScene": "drunk"
+        },
+        {
+          "text": "back",
+          "nextScene": "endOfBayside"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "inTheRain": {
-      "description": "The rain is pouring now, and you can feel the cold air impeding your progress. You're closer to the bridge leading into Wynwood. It is 1 pm.",
+    "drunk": {
+      "description": "It's time to go home \nYou order an Uber, a Lyft, whatever you can swipe on your phone.\n There's a full Moon out on the horizon.",
       "choices": [
-        { "text": "move", "nextScene": "stillWalking" }
+        {
+          "text": "move",
+          "nextScene": "end1"
+        },
+        {
+          "text": "back",
+          "nextScene": "bar"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "stillWalking": {
-      "description": "Just as you're about to start crossing over the bridge, the bridge alarm starts going off. The bridge is going up, and the rain is still pouring. You see a hundred yachts on the horizon.",
+    "end1": {
+      "description": "You stumble up to your home, and struggle with the keys.\n You barge in, and lock it. You flop onto your bed. \nThe end of the day. But could it have been different? Only one way to find out.",
       "choices": [
-        { "text": "look", "nextScene": "timePasses" }
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "timePasses": {
-      "description": "The rain continues. The bridge is still up. It's 2 pm. More time passes. Finally, the bridge does down, and you can keep walking.",
+    "stillVibin": {
+      "description": "You ignore that feeling. You look around Versailles. \n All the old communities and voices here, cuban and more. It's nice.\n You could stay here a while longer, right?",
       "choices": [
-        { "text": "move", "nextScene": "demoDay1" }
+        {
+          "text": "wait",
+          "nextScene": "continueTheVibe"
+        },
+        {
+          "text": "back",
+          "nextScene": "versaillesCafe"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "uber": {
-      "description": "You've ordered an Uber to BrainStation. The driver is on their way.\n\n- Type the option's text to make a choice.\n- Choose the best option to reach BrainStation for Demo Day!",
+    "continueTheVibe": {
+      "description": "You've been at Versailles for a while now, but no one seems to mind. \n A camera crew comes in, local news. They want a tourist piece on the place, and the people",
       "choices": [
-        { "text": "wait", "nextScene": "keepWaiting" }
+        {
+          "text": "wait",
+          "nextScene": "newsVibe"
+        },
+        {
+          "text": "back",
+          "nextScene": "stillVibin"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "keepWaiting": {
-      "description": "You picked the quickest option, but Miami traffic has no regard for human life, nor your time. You stare at your phone, but no notification so far. You look around you, the bakery slowly filling up with a gaggle of Miamians and tourists. You decide to head outside and wait near the coffee window.",
+    "newsVibe": {
+      "description": "Some older folk, Cubans and tourists, flock to the cameras, yelling about liberty, and about Miami. \nYou wait and wait, and you get hungry.",
       "choices": [
-        { "text": "wait", "nextScene": "moreWaiting" }
+        {
+          "text": "wait",
+          "nextScene": "food"
+        },
+        {
+          "text": "back",
+          "nextScene": "continueTheVibe"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "moreWaiting": {
-      "description": "A five-minute wait has turned into a loop of waiting. Your initial Uber ride canceled on you. The line outside of Versailles has grown into a frenzy. You keep waiting.",
+    "food": {
+      "description": "You sit down inside of the restaurant proper. \nYou order a Pan con Bistec, steak sandwich with fries, a plate of rice on the side.\nYou eat, and you think.",
       "choices": [
-        { "text": "wait", "nextScene": "carRide" }
+        {
+          "text": "wait",
+          "nextScene": "coffee"
+        },
+        {
+          "text": "back",
+          "nextScene": "newsVibe"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "carRide": {
-      "description": "You enter the car. You were expecting some nice AC, but the smell of the dankest of dank weed has hit your nostrils. You could go out and get another car, but that means more waiting. So, you steel yourself forward. The driver stares straight ahead and does not wait for you to put on your seatbelt while he's putting pedal to the metal, trying to beat the crush of traffic on 27th street.",
+    "coffee": {
+      "description": "You finish your food, and it's time for another coffee.\nJust as you finish ordering, you hear a crash outside. You don't get up, though.",
       "choices": [
-        { "text": "continue", "nextScene": "carPanic" }
+        {
+          "text": "wait",
+          "nextScene": "crash"
+        },
+        {
+          "text": "back",
+          "nextScene": "food"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "carPanic": {
-      "description": "The uber is weaving in and out of lanes, and hey, you're making good progress. It's like in no time at all, you'll make it to the end. But, the car is weaving crazily. And you did waste an hour waiting....and getting dangerously close to other cars. Your head is swimming from the weed smell and the veering of the car, but you try to block it out. You're almost there.",
+    "crash": {
+      "description": "You hear that an SUV crashed into a light pole.\n You hear that the news captured footage of it. That people scattered.\nYou drink your coffee.",
       "choices": [
-        { "text": "continue", "nextScene": "bridge" }
+        {
+          "text": "wait",
+          "nextScene": "end2"
+        },
+        {
+          "text": "back",
+          "nextScene": "coffee"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "bridge": {
-      "description": "The car finally stops weaving through traffic to make it to a red light, you're now on thirteenth avenue, just about to leave Calle Ocho/Little Havana. It should be smooth sailing now, right? But you notice your uber driver gripping the wheel very tight, and as you rumble along, you can see why: the north bridge is up. And traffic is at a standstill. No amount of weaving or dodging will change the reality you're in now: You're stuck in traffic.",
+    "end2": {
+      "description": "\nThe rest of the day, and night, goes like that. Sitting, eating, drinking, listening, watching, wondering.\nYou head home. But you feel like you forgot something.",
       "choices": [
-        { "text": "wait", "nextScene": "waitForBridge" }
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "waitForBridge": {
-      "description": "The bridge is still up.",
+    "observe": {
+      "description": "\nAfter a quick breakfast, you feel like it's time to keep moving. \nBut your eyes fall on a table near the entrance. A briefcase there, left all alone.",
       "choices": [
-        { "text": "wait", "nextScene": "freeBridge" }
+        {
+          "text": "look",
+          "nextScene": "briefcase"
+        },
+        {
+          "text": "back",
+          "nextScene": "versaillesCafe"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "freeBridge": {
-      "description": "The bridge is down, and you are free to go...or in this case, your uber Driver can hightail it there. Hold on!",
+    "briefcase": {
+      "description": "\nOne quick look at the briefcase, which is slightly open, and you think you've hit the jackpot: cash stacked in neat little piles. No one's looking, right?",
       "choices": [
-        { "text": "continue", "nextScene": "demoDay2" }
+        {
+          "text": "look",
+          "nextScene": "takeMoney"
+        },
+        {
+          "text": "back",
+          "nextScene": "observe"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        },
+        {
+          "text": "help",
+          "nextScene": "help"
+        }
       ]
     },
-    "metrorail": {
-      "description": "You've decided to take the Metrorail to reach BrainStation. Should be easy, right? The public transport is usually crowded but efficient.\n\n- Type the option's text to make a choice.\n- Choose the best option to reach BrainStation for Demo Day!",
+    "takeMoney": {
+      "description": "\nJust as you're about to close the briefcase, and walk out with the money, something moves quickly on your periphery. You turn, and get pushed.",
       "choices": [
-        { "text": "enter", "nextScene": "easyCard" }
+        {
+          "text": "look",
+          "nextScene": "badMove"
+        },
+        {
+          "text": "back",
+          "nextScene": "briefcase"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
       ]
     },
-    "easyCard": {
-      "description": "You're outside Versailles, bro, and while you have time, time is not on your side. One free trolley ride, One hour has elapsed. You're at the Brickell metrorail station. Time to buy an EasyCard and ride.",
+    "badMove": {
+      "description": "\nA man in a suit, yelling in Spanglish, tells you off. He closes the briefcase and steps out of Versailles.\nPeople stare at you, and you don't stare back. \nThat's when you notice something at your feet",
       "choices": [
-        { "text": "enter", "nextScene": "metroRide" }
+        {
+          "text": "look",
+          "nextScene": "score"
+        },
+        {
+          "text": "back",
+          "nextScene": "takeMoney"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
       ]
     },
-    "metroRide": {
-      "description": "High up in the sky, about 40 feet, the Metro car is running fast. People stare out the windows. You do, too. The downtown horizon shifts away, the skyscrapers, finished and unfinished, blurry in the distance.",
+    "score": {
+      "description": "\nA stack of bills, bundled up and brand-new, is waiting for you, near your sneakers. \nYou play it cool, and pick it up.",
       "choices": [
-        { "text": "enter", "nextScene": "stuck" }
+        {
+          "text": "look",
+          "nextScene": "end3"
+        },
+        {
+          "text": "back",
+          "nextScene": "badMove"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
       ]
     },
-    "stuck": {
-      "description": "And then, just as quickly as you're moving, the train slowly stops moving. The wheels stop running. The car is stuck on the middle of the track. No way to leave, and you feel the wind moving about the outside.",
+    "end3": {
+      "description": "\nYou manage to leave the cafe with no one the wiser. \nYou high-tail it home, forgetting your plans for the day.\nYou lay the bundle of bills on your dresser drawer, and settle in for the night.",
       "choices": [
-        { "text": "exit", "nextScene": "metroWaiting" }
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
       ]
     },
-    "metroWaiting": {
-      "description": "It's been thirty minutes. The metro car is still stuck. There's been one announcement, saying that things will be cleared up and moving soon. You hope. It is 1:30 pm.",
+    "worry": {
+      "description": "\nYou're supposed to do something. But you have this weird feeling, goosebumps on the back of your neck. \n-You feel that silent alarm in your mind going off.",
       "choices": [
-        { "text": "exit", "nextScene": "metroMoving" }
+        {
+          "text": "worry",
+          "nextScene": "wrong"
+        },
+        {
+          "text": "back",
+          "nextScene": "versaillesCafe"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
       ]
     },
-    "metroMoving": {
-      "description": "A further twenty minutes later, with no updates over the intercom, you think you have no chance. Suddenly, a jolt, and you're moving again.",
+    "wrong": {
+      "description": "\nYou start pacing and sweating, you feel like people are watching you. But the rest of the people in the cafe pay you no mind.\n-You keep worrying, though.",
       "choices": [
-        { "text": "exit", "nextScene": "lastBus" }
+        {
+          "text": "worry",
+          "nextScene": "off"
+        },
+        {
+          "text": "back",
+          "nextScene": "panic"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
       ]
     },
-    "lastBus": {
-      "description": "You're almost there. But time is rushing by. If you hurry, the bus should get you there. Hurry!",
+    "off": {
+      "description": "\nYou step outside for a moment, and try to catch your breath. \nSomeone offers you some water, and you drink it fast.\nYou still feel off. Maybe this is it, you think.",
       "choices": [
-        { "text": "enter", "nextScene": "demoDay3" }
+        {
+          "text": "worry",
+          "nextScene": "worryHome"
+        },
+        {
+          "text": "back",
+          "nextScene": "wrong"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
       ]
     },
-    "demoDay1": {
-      "description": "-Congratulations! You've made it to BrainStation for Demo Day, even though the rain made a mess of things! Dry off and get ready: The event starts at 3 pm.",
-      "choices": []
+    "worryHome": {
+      "description": "\nYou order an Uber and go home. You ignore texts and calls.\nYou lay in your bed, and try to watch TV.\nBut the feeling is still there.",
+      "choices": [
+        {
+          "text": "worry",
+          "nextScene": "end4"
+        },
+        {
+          "text": "back",
+          "nextScene": "off"
+        },
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
+      ]
     },
-    "demoDay2": {
-      "description": "-Congratulations! It is now 2:59 pm, but you made it to Brainstation's Demo Day. Your nerves may be shaky from the Uber-ing, but you made it!",
-      "choices": []
-    },
-    "demoDay3": {
-      "description": "-Congratulations! You made it, a few minutes, give or take. But you made it to Brainstation's Demo Day. Drink some water, stretch, and check out all the cool projects!",
-      "choices": []
+    "end4": {
+      "description": "\nYour worried state of mind leaves you exhausted, and soon to sleep.\nYou missed out on important stuff, but you can sleep and try again, at least.",
+      "choices": [
+        {
+          "text": "restart",
+          "nextScene": "start"
+        }
+      ]
     },
     "help": {
-      "description": "-Welcome to A Miami Story! Here are some player controls:\n- Type the option's text to make a choice.\n- Choose the best option to reach BrainStation for Demo Day!\nGood luck!\n\n- Type 'back' to return to the previous scene.",
+      "description": "-Welcome to A Miami Story! Here are some player controls:\n- Type the option's text to make a choice.\n- Choose the best option to see four different endings. If stuck, remember four commands: move, look, wait, and panic.!\nGood luck!\n\n- Type 'back' to return to the previous scene.",
       "choices": [
-        { "text": "back", "nextScene": "versaillesCafe" }
+        {
+          "text": "back",
+          "nextScene": "versaillesCafe"
+        }
       ]
     }
   }
