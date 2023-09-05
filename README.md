@@ -58,7 +58,9 @@ npm i node
 
 npm i Express
 
-npm i nodemon
+npm i nodemon 
+
+npm nodemon server.js
 
 Test on Postman (endpoints /transitions and /scenes)
 
